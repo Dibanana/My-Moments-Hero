@@ -35,7 +35,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            return;
+            //rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            //changes player velocity to half when letting go of jump key
+            //In practice, makes player jump higher by holding jump.
         }
 
         Flip();
