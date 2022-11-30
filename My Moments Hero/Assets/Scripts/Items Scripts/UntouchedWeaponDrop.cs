@@ -1,18 +1,18 @@
-using System;
+using System; //This one may be useless, but I saw it in the tutorial.
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using UnityEngine.UI; //This one may be useless, but I saw it in the tutorial so I left it.
+using TMPro; 
 
-public class TheUntouchedItemScript : MonoBehaviour
+public class UntouchedWeaponDrop : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI PickUpText;
 
     private bool PickUpAllowed;
 
-    //Use this for initialization
+    //Use this for initialization - - Turns off text before arriving in range.
     private void Start(){
         PickUpText.gameObject.SetActive(false);
     }
