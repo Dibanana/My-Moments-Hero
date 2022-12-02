@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63db7d1c13d652149b7916b42de6cc54, type: 3}
+  m_Name: Snack
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  type: 0
+  description: 'Eat this to restore 3 Hearts.
+
+    (I have no idea what health should
+    be like, so assume this is right)'
