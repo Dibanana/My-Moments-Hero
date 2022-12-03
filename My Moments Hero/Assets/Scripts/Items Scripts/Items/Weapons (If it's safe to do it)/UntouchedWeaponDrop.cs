@@ -10,25 +10,17 @@ public class UntouchedWeaponDrop : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI PickUpText;
 
-    private bool PickUpAllowed;
-
     //Use this for initialization - - Turns off text before arriving in range.
     private void Start(){
         PickUpText.gameObject.SetActive(false);
     }
     // Update is called once per frame
-    private void Update()
-    {
-        if (PickUpAllowed && Input.GetKeyDown(KeyCode.E))
-            PickUp();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name.Equals("Player"))
         {
             PickUpText.gameObject.SetActive(true);
-            PickUpAllowed = true;
         }
     }
 
@@ -37,12 +29,6 @@ public class UntouchedWeaponDrop : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             PickUpText.gameObject.SetActive(false);
-            PickUpAllowed = false;
         }
-    }
-
-    private void PickUp()
-    {
-        Destroy(gameObject);
     }
 }

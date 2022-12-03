@@ -6,6 +6,7 @@ public class WeaponObject : ItemObject
 {
     public float ATK;
     public float DEF;
+    public float SPD;
     public void Awake()
     {
         type = ItemType.Weapon;

@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Health Object", menuName = "Scripts/Items Scripts/Health")]
 public class HealthObject : ItemObject
 {
+    public float HPRestore;
     public void Awake()
     {
         type = ItemType.Health;
