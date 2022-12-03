@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6746aeba27d1d7248b0b949d09e98fea, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8551041337991573747, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
   type: 1
   description: 'Attack - - Fire (Each shot fires in a straight line to the first
     object in its way. Attacks have minor knockback effect to character)
@@ -25,5 +25,6 @@ MonoBehaviour:
     Charged bullet - - Fire a larger shot. (A single delayed
     shot that expends all remaining ammo and produces massive knockback to player
     and enemy.)'
-  ATK: 10
+  ATK: 15
   DEF: 0
+  SPD: 0.75

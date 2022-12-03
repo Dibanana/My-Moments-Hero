@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6746aeba27d1d7248b0b949d09e98fea, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 43894334465370772, guid: d09068df714c01a4d9cfd03a792b2bb3, type: 3}
   type: 1
   description: 'Attack - - Shield bash (Attack target for little damage, but higher
     knockback.)
@@ -26,3 +26,4 @@ MonoBehaviour:
     If thrown at a wall, will stick to the side and act as a platform)'
   ATK: 0
   DEF: 50
+  SPD: 1

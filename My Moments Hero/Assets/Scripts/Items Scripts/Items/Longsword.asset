@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6746aeba27d1d7248b0b949d09e98fea, type: 3}
   m_Name: Longsword
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5098143423947395875, guid: ad2e90f3383b1f748ada3987e5b9633a, type: 3}
   type: 1
   description: 'Attack - - Swing (A small, quick attack)
 
@@ -32,3 +32,4 @@ MonoBehaviour:
 '
   ATK: 20
   DEF: 0
+  SPD: 1
