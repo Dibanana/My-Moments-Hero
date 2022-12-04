@@ -722,8 +722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089fcb2f3468ae247a5bae1eced5756e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: f47077e3a9f69e24eb8cacb48be23995, type: 2}
   IsEquipped: 00
+  inventory: {fileID: 11400000, guid: f47077e3a9f69e24eb8cacb48be23995, type: 2}
 --- !u!1 &559298905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1406,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 109912126890656206, guid: c3bdf4a913b3fa94297deb0766269e35, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: adef75b1739eb3c4c962f60af56f6455, type: 2}
+    - target: {fileID: 109912126890656206, guid: c3bdf4a913b3fa94297deb0766269e35, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: f47077e3a9f69e24eb8cacb48be23995, type: 2}
+    - target: {fileID: 109912126890656206, guid: c3bdf4a913b3fa94297deb0766269e35, type: 3}
       propertyPath: PickUpText
       value: 
       objectReference: {fileID: 813216136}
@@ -1728,6 +1736,14 @@ PrefabInstance:
       value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 6289292756283346724, guid: e6c98ebd2148de1418a73b65f3b841f0, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ebc7d1627de18248a0d195e363b9c0f, type: 2}
+    - target: {fileID: 6289292756283346724, guid: e6c98ebd2148de1418a73b65f3b841f0, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: f47077e3a9f69e24eb8cacb48be23995, type: 2}
+    - target: {fileID: 6289292756283346724, guid: e6c98ebd2148de1418a73b65f3b841f0, type: 3}
       propertyPath: PickUpText
       value: 
       objectReference: {fileID: 436819582}
@@ -1795,29 +1811,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6294212151169200867, guid: 3531dfaf789f70648bebfcfb04c63cbd, type: 3}
   m_PrefabInstance: {fileID: 7153375837228715596}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1420031689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 561887868201784187, guid: c3bdf4a913b3fa94297deb0766269e35, type: 3}
-  m_PrefabInstance: {fileID: 1038477325}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1420031693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6527951133151711256, guid: c3bdf4a913b3fa94297deb0766269e35, type: 3}
   m_PrefabInstance: {fileID: 1038477325}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1420031694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420031689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be5bf272a101f6428e5801f45e9668d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: e4cf8326f70719649a66d819a2a4cd4f, type: 2}
 --- !u!1001 &1460696535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1931,6 +1929,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8740546076500493855, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 385433f34cf41a3439fea5a1cdb20ad1, type: 2}
+    - target: {fileID: 8740546076500493855, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: f47077e3a9f69e24eb8cacb48be23995, type: 2}
     - target: {fileID: 8740546076500493855, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
       propertyPath: PickUpText
       value: 
@@ -2240,6 +2246,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 122840278862740350, guid: 4456832732582c94ca073c6759271b94, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 37df0c0786f52cc4c9395d5b7debe9a7, type: 2}
+    - target: {fileID: 122840278862740350, guid: 4456832732582c94ca073c6759271b94, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: f47077e3a9f69e24eb8cacb48be23995, type: 2}
+    - target: {fileID: 122840278862740350, guid: 4456832732582c94ca073c6759271b94, type: 3}
       propertyPath: PickUpText
       value: 
       objectReference: {fileID: 753983700}
@@ -2467,6 +2481,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Longsword
       objectReference: {fileID: 0}
+    - target: {fileID: 1555018357513057959, guid: dfbeb54794972ae459165b8758457a2e, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: e4cf8326f70719649a66d819a2a4cd4f, type: 2}
+    - target: {fileID: 1555018357513057959, guid: dfbeb54794972ae459165b8758457a2e, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: f47077e3a9f69e24eb8cacb48be23995, type: 2}
     - target: {fileID: 1555018357513057959, guid: dfbeb54794972ae459165b8758457a2e, type: 3}
       propertyPath: PickUpText
       value: 
