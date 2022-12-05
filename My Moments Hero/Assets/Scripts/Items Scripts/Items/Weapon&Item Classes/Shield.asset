@@ -24,6 +24,6 @@ MonoBehaviour:
     Throw
     shield - - Throws shield forward (Enemies and dynamic objects get massive knockback.
     If thrown at a wall, will stick to the side and act as a platform)'
-  ATK: 0
+  ATK: 10
   DEF: 50
   SPD: 1
