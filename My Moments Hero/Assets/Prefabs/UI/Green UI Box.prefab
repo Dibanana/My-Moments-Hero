@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1401694121374271196, guid: ce28a2df062609a43bbf7dd50ac4ef19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401694121374271196, guid: ce28a2df062609a43bbf7dd50ac4ef19, type: 3}
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
@@ -101,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401694121374271198, guid: ce28a2df062609a43bbf7dd50ac4ef19, type: 3}
       propertyPath: m_Name
-      value: Item Variant 1
+      value: Green UI Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce28a2df062609a43bbf7dd50ac4ef19, type: 3}

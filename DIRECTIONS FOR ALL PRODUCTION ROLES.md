@@ -82,11 +82,28 @@ If you need more direction or details on anything, just ask me directly and tell
    **(I've never given art direction before, so your patience will be highly appreciated)**
 
 
+
+
+- - - NOTE FOR ALL ARTISTS - - -
+
+UI: SIZE & RATIO
+For every weapon/item sprite in inventory, the size ratio will be **1:1** and the pixel count will be ideally **64X64**
+
+CHARACTER SIZE: Ratio **1:2** Pixels **256X512** (I'm willing to compromise if it turns out different, but I am keeping the hitbox ratio the same)
+
+ENEMY SIZE: TBD (Once the enemies are created I can make a list)
+
+TERRAIN TEXTURE: Ratio **Infinity:1** Pixels **InfiniteX256** (I'll be honest, I don't know how texturing works.)
+
+VOID FILL: **Infinite:Infinite** (For art to fill in any unused space that the background won't be using already IE: Below Ground, Beyond walls)
+
 - - - PLAYER // CHARACTERS - - -
 
-I want something simple and fluid. Childlike, if possible, with certain articles of clothing having vibrant colors to stand out.
+I want something simple and comfortable. Childlike, if possible, with a single article of clothing having vibrant colors to stand out.
 
-At this stage I don't care what the main character is. Boy, Girl, Robot Alien Vending Machine. Flip a coin and move forward.
+At this stage I havent figured out who the main character is. Only a generic outline. I want you to bring the topic up when you're ready.
+
+Boy, Girl, Robot Alien Vending Machine. Flip a coin and move forward.
 Just make sure that the character seems approachable and friendly.
 Best I can provide for a description is just some generic emotional traits that will likely last until production phase.
 **Happy-Go-Lucky|Naive|Bubbly|Energetic|Youthful|Kindhearted**
