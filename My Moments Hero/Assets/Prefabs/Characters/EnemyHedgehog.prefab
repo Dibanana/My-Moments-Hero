@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9218791547251240856}
   - component: {fileID: 9218791547251240857}
   - component: {fileID: 9218791547251240870}
+  - component: {fileID: 7388367135970012097}
   m_Layer: 7
   m_Name: EnemyHedgehog
   m_TagString: Enemy
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  HealthInfinite: 0
 --- !u!114 &9218791547251240870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,5 +168,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 2
-  PlayerHealth: {fileID: 0}
-  playerMovement: {fileID: 0}
+  PlayerHealth: {fileID: 5046887573390808112, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
+  playerMovement: {fileID: 2437153128353525100, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
+--- !u!114 &7388367135970012097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9218791547251240871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1556ec8207c7ccf4f8166c2a249b82a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnockbackForce: 400
+  KnockbackCounter: 0
+  PlayerPos: {fileID: 2437153128353525096, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
+  KnockPower: 1
+  ThisPos: {fileID: 9218791547251240861}
+  rb: {fileID: 9218791547251240859}

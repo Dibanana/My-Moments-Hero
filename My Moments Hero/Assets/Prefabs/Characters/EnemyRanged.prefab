@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4748325129959379797}
   - component: {fileID: 4748325129959379882}
   - component: {fileID: 4748325129959379887}
+  - component: {fileID: -1662667279900955766}
   m_Layer: 7
   m_Name: EnemyRanged
   m_TagString: Enemy
@@ -273,6 +274,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  HealthInfinite: 0
+--- !u!114 &-1662667279900955766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748325129959379796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1556ec8207c7ccf4f8166c2a249b82a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnockbackForce: 300
+  KnockbackCounter: 0
+  PlayerPos: {fileID: 2437153128353525096, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
+  KnockPower: 1
+  ThisPos: {fileID: 4748325129959379886}
+  rb: {fileID: 4748325129959379880}
 --- !u!1 &4748325130252206650
 GameObject:
   m_ObjectHideFlags: 0

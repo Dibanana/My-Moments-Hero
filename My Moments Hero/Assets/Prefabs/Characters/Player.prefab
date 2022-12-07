@@ -244,6 +244,7 @@ MonoBehaviour:
   Yrange: 1
   AttackPos: {fileID: 5046887573227544679}
   AreaOfEffect: {fileID: 2437153128353525102}
+  KnockPower: 1
 --- !u!114 &5046887573390808112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 42
+  HealthInfinite: 0
 --- !u!1 &2437153128496062899
 GameObject:
   m_ObjectHideFlags: 0

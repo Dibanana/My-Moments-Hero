@@ -5,17 +5,23 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
 
-    public int health;
+    public float health;
+    public bool HealthInfinite;
     //public bool IsDead = false;
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (HealthInfinite == true)
         {
-            Destroy(gameObject);
+            return;
+        }else{
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
-    public void TakeDamage( int Damage)
+    public void TakeDamage(int Damage)
     {
         health -= Damage;
         //Damage will be taken
