@@ -6,11 +6,15 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private float Xrange;
     [SerializeField] private float Yrange;
     [SerializeField] private float colliderDistance;
-    [SerializeField] private float damage;
-    [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private Collider2D boxCollider;
     [SerializeField] private LayerMask Player;
+    [SerializeField] private float speed;
+    [SerializeField] private float stoppingDistance = 0f;
     private float cooldownTimer = Mathf.Infinity;
     public GameObject projectilePrefab;
+    public bool IsRanged = false; //if ranged, will shoot when player is in sight.
+    private Transform player;
+    public Rigidbody2D rigidBody2D;
     //private Animator anim;
 
     public Transform firePoint;
@@ -26,17 +30,30 @@ public class EnemyShooting : MonoBehaviour
         cooldownTimer += Time.deltaTime;
         if (PlayerInSight()) //Attacks if the enemy is within the red box ("sight") around the enemy
         {
-            if (cooldownTimer >= attackCooldown)
-            {
-                if (gameObject == null)
+            if (IsRanged == true)
+                {if (cooldownTimer >= attackCooldown)
                 {
-                    return;
+                    if (gameObject == null)
+                    {
+                        return;
+                    }
+                    else 
+                    {
+                        cooldownTimer = 0;
+                        //anim.SetTrigger("IsShooting");
+                        Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+                    }
                 }
-                else 
+            }else
+            {
+                player = GameObject.FindGameObjectWithTag("Player").transform;
+                if(Vector2.Distance(transform.position, player.position) > stoppingDistance)
                 {
-                    cooldownTimer = 0;
-                    //anim.SetTrigger("IsShooting");
-                    Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+                    rigidBody2D = GetComponent<Rigidbody2D>();
+                    Vector2 moveDir = (player.transform.position-transform.position).normalized*speed;
+                    rigidBody2D.velocity = new Vector2(moveDir.x, rigidBody2D.velocity.y);
+                }else{
+                    return;
                 }
             }
         }

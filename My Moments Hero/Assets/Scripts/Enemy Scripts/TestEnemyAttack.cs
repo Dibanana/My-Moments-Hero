@@ -7,7 +7,13 @@ public class TestEnemyAttack : MonoBehaviour
     public int Damage;
     public Health PlayerHealth;
     public PlayerMovement playerMovement;
-
+    public GameObject player;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerHealth = player.GetComponent<Health>();
+        playerMovement = player.GetComponent<PlayerMovement>();
+    }
     // Start is called before the first frame update
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -24,11 +30,5 @@ public class TestEnemyAttack : MonoBehaviour
             }
             PlayerHealth.TakeDamage(Damage);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
