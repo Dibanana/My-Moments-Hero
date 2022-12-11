@@ -12,6 +12,10 @@ public class Knockback : MonoBehaviour
     [SerializeField]private Transform ThisPos;
     [SerializeField] private Rigidbody2D rb;
 
+    void Awake()
+    {
+        PlayerPos = GameObject.FindGameObjectWithTag("Player").transform;
+    } //Day 3 of the realization that this one line of code is so fucking useful.
     private void FixedUpdate()
     {
         if(KnockbackCounter <= 0)

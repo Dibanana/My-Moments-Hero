@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 9218791547251240857}
   - component: {fileID: 9218791547251240870}
   - component: {fileID: 7388367135970012097}
-  - component: {fileID: 5597945377712101926}
   - component: {fileID: 6838929375461354730}
   m_Layer: 7
   m_Name: EnemyHedgehog
@@ -191,18 +190,6 @@ MonoBehaviour:
   KnockPower: 1
   ThisPos: {fileID: 9218791547251240861}
   rb: {fileID: 9218791547251240859}
---- !u!114 &5597945377712101926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9218791547251240871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7918bd3736d06bc479fe704fbd1e7513, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6838929375461354730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +212,8 @@ MonoBehaviour:
     m_Bits: 8
   speed: 3
   stoppingDistance: 0
-  projectilePrefab: {fileID: 549900502376208692, guid: dd83ca32c31c1ce4694ebea16b30d3eb, type: 3}
+  projectilePrefab: {fileID: 6137451994672591631, guid: 2859446838c6a2f4796ebd3bee7255c4, type: 3}
+  projectilePrefabScale: {fileID: 6137451994672591616, guid: 2859446838c6a2f4796ebd3bee7255c4, type: 3}
   IsRanged: 0
   rigidBody2D: {fileID: 9218791547251240859}
   firePoint: {fileID: 9218791547251240861}
