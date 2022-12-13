@@ -11,6 +11,8 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
     public string SavePath;
     private ItemDatabaseObject Database;
     public List<InventorySlot> Container = new List<InventorySlot>();
+    public int InventoryCapacity = 10;
+    public int InventoryAmount;
     
     private void OnEnable()
     {
@@ -21,18 +23,30 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 #endif
     }
 
-    public void AddItem(ItemObject _item)
+    public void AddItem(ItemObject _item) //this one I followed a youtube tutorial on how to do it.
     {
         for (int i=0; i < Container.Count; i++)
         {
-            if(Container[i].item == _item)
+            if(Container[i].item == _item || InventoryAmount >= InventoryCapacity)
             {
                 return;
             }
         }
         Container.Add(new InventorySlot(Database.GetId[_item], _item));
+        InventoryAmount += 1;
     }
-
+    public void RemoveItem(ItemObject _item) //I made this one personally, dunno if it would work or not
+    {
+        for (int i=0; i < Container.Count; i++)
+        {
+            if(Container[i].item == _item)
+            {
+                Container.Remove(Container[i]);
+                InventoryAmount -= 1;
+            }
+        }
+    }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void Save()
     {
         string SaveData = JsonUtility.ToJson(this,true);
@@ -51,7 +65,7 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
             file.Close();
         }
     }
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void OnAfterDeserialize()
     {
         //for (int i = 0; i < Container.Count; i++)

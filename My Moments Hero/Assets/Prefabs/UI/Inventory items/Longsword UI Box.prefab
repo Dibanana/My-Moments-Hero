@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3677275609244128230, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 8bba5a76058f7874296dce6e833a31b6, type: 3}
     - target: {fileID: 2030592943468216789, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
       propertyPath: m_Name
-      value: Pink UI Box
+      value: Longsword UI Box
       objectReference: {fileID: 0}
     - target: {fileID: 2030592943468216790, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
       propertyPath: m_Pivot.x
@@ -101,15 +105,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2030592943468216791, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
       propertyPath: m_Color.b
-      value: 0.86382383
+      value: 0.9294118
       objectReference: {fileID: 0}
     - target: {fileID: 2030592943468216791, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
       propertyPath: m_Color.g
-      value: 0.1462264
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2030592943468216791, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.28627452
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2799579249973628294, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
+      propertyPath: m_text
+      value: Longsword
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799579249973628294, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
+      propertyPath: m_fontSize
+      value: 18.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926135597172333130, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: e4cf8326f70719649a66d819a2a4cd4f, type: 2}
+    m_RemovedComponents:
+    - {fileID: 8826145533779748812, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c6e5ac3f77be6904e9a8039254d11383, type: 3}

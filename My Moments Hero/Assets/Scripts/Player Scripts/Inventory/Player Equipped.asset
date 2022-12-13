@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24835879116c0154b8bc7a7164755fd2, type: 3}
-  m_Name: Player Inventory
+  m_Name: Player Equipped
   m_EditorClassIdentifier: 
   SavePath: /SavedInventory
   Container: []
-  InventoryCapacity: 4
+  InventoryCapacity: 3
   InventoryAmount: 0

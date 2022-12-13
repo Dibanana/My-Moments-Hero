@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2212118237182380220, guid: ad2e90f3383b1f748ada3987e5b9633a, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ebc7d1627de18248a0d195e363b9c0f, type: 2}
     - target: {fileID: 5098143423947395872, guid: ad2e90f3383b1f748ada3987e5b9633a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -101,7 +105,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5098143423947395875, guid: ad2e90f3383b1f748ada3987e5b9633a, type: 3}
       propertyPath: m_Name
-      value: Item Variant 3
+      value: Gun UI Box
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8949841677704355696, guid: ad2e90f3383b1f748ada3987e5b9633a, type: 3}
+      propertyPath: m_text
+      value: Pistol
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2347192829612258618, guid: ad2e90f3383b1f748ada3987e5b9633a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad2e90f3383b1f748ada3987e5b9633a, type: 3}

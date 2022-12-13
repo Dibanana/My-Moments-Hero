@@ -205,7 +205,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4748325129959379796}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8e2514770bf760e468e304e47c680e35, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   Damage: 10
   Xrange: 6
   Yrange: 2
-  colliderDistance: 1
+  colliderDistance: 1.15
   boxCollider: {fileID: 4748325129959379883}
   Player:
     serializedVersion: 2
@@ -247,6 +247,7 @@ MonoBehaviour:
   firePoint: {fileID: 4748325130252206651}
   projectilePrefab: {fileID: 6137451994672591631, guid: 2859446838c6a2f4796ebd3bee7255c4, type: 3}
   projectilePrefabScale: {fileID: 6137451994672591616, guid: 2859446838c6a2f4796ebd3bee7255c4, type: 3}
+  DoDamage: {fileID: 0}
   speed: 1
   stoppingDistance: 0
   rigidBody2D: {fileID: 4748325129959379880}
@@ -264,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   HealthInfinite: 0
+  DamageIsTaken: 0
 --- !u!114 &-1662667279900955766
 MonoBehaviour:
   m_ObjectHideFlags: 0

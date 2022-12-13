@@ -19,6 +19,30 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1144930466357307163, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.92814493
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144930466357307163, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144930466357307163, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.28627455
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144930466357307165, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: e4cf8326f70719649a66d819a2a4cd4f, type: 2}
+    - target: {fileID: 1144930466357307166, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: e4cf8326f70719649a66d819a2a4cd4f, type: 2}
+    - target: {fileID: 1144930466357307167, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
+      propertyPath: m_Name
+      value: Longsword
+      objectReference: {fileID: 0}
     - target: {fileID: 2476175913775110089, guid: 86677b448ae27d34294b04e76ff380c1, type: 3}
       propertyPath: m_RootOrder
       value: 0

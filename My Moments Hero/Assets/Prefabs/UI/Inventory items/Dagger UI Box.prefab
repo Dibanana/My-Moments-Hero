@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2770498949469314364, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 8bba5a76058f7874296dce6e833a31b6, type: 3}
+    - target: {fileID: 3375550679763430252, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 37df0c0786f52cc4c9395d5b7debe9a7, type: 2}
+    - target: {fileID: 5503224137570991264, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
+      propertyPath: m_text
+      value: Daggers
+      objectReference: {fileID: 0}
     - target: {fileID: 8551041337991573744, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -93,19 +105,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8551041337991573745, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.3372549
       objectReference: {fileID: 0}
     - target: {fileID: 8551041337991573745, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
       propertyPath: m_Color.g
-      value: 0.989954
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8551041337991573745, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.28627452
       objectReference: {fileID: 0}
     - target: {fileID: 8551041337991573747, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
       propertyPath: m_Name
-      value: Yellow UI Box
+      value: Dagger UI Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c6a9024cd2942448a1a49f9fd7e821, type: 3}
