@@ -7,17 +7,13 @@ using TMPro;
 
 public class UntouchedWeaponDrop : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI PickUpText;
-    //Use this for initialization - - Turns off text before arriving in range.
-
+    [SerializeField]private TextMeshProUGUI PickUpText;
     [SerializeField]private TextMeshProUGUI InventoryFullText;
 
-    public ItemObject item; //lets all other codes know that the object attatched to this line of code is an item
-    public InventoryObject inventory; //allows the script to access inventory
-    private bool PickUpAllowed = false;
-    public int InventoryCapacity;
-    public int InventoryAmount;
+    private bool PickUpAllowed = false;    //Use this for initialization - - Turns off text before arriving in range.
+    //public int InventoryCapacity;
+    //public int InventoryAmount;
+    //for personal use later
 
     private void Start(){
         PickUpText.gameObject.SetActive(false);
@@ -33,18 +29,18 @@ public class UntouchedWeaponDrop : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        InventoryCapacity = inventory.InventoryCapacity;
-        InventoryAmount = inventory.InventoryAmount;
+        //InventoryCapacity = inventory.InventoryCapacity;
+        //InventoryAmount = inventory.InventoryAmount;
         if(collision.gameObject.name.Equals("Player"))
         {
-            if (InventoryAmount < InventoryCapacity)
-            {
-                PickUpText.gameObject.SetActive(true);
-                PickUpAllowed = true;
-            } else{
-                InventoryFullText.gameObject.SetActive(true);
-            }
-        }
+            //if (InventoryAmount < InventoryCapacity)
+            //{
+            PickUpText.gameObject.SetActive(true);
+            PickUpAllowed = true;
+        } //else{
+           //     InventoryFullText.gameObject.SetActive(true);
+            //}
+        //}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -58,11 +54,6 @@ public class UntouchedWeaponDrop : MonoBehaviour
     }
     void Pickup()
     {
-        var item=this.GetComponent<Item>();
-        if (InventoryAmount < InventoryCapacity)
-        {
-            inventory.AddItem(item.item); //adds the item to inventory. (hopefully it's properly defined.)
-            Destroy(gameObject);
-        }
+        //Do whatever the tutorial says here.
     }
 }
