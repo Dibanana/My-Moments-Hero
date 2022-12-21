@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-    [Header ("For Combat")] //I have no idea why this header in particular doesn't work
-    private float cooldownTimer = Mathf.Infinity;
+    [Header ("For Combat")] //Reminder: Headers don't work when followed by a private statement. Make sure the statement that follows is either public or serialized.
     [SerializeField] private float attackCooldown;
     private Transform player;
     [SerializeField] private int Damage;
-
+    private float cooldownTimer = Mathf.Infinity;
+    
     [Header ("Area of Sight")]
     [SerializeField] private float Xrange;
     [SerializeField] private float Yrange;
@@ -16,13 +16,13 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private LayerMask Player;
 
     [Header ("If Ranged")]
-    public bool IsRanged = false; //if ranged, will shoot when player is in sight.
+    public bool IsRanged = false; //if ranged, will shoot player on sight.
     public Transform firePoint;
     public GameObject projectilePrefab;
     public Transform projectilePrefabScale;
     public Enemy1ProjectileChauncey DoDamage;
 
-    [Header ("If Melee")]
+    [Header ("If Melee")] //if melee, will move in the direction of the player when in range (Jump/Attack not yet included)
     [SerializeField] private float speed;
     [SerializeField] private float stoppingDistance = 0f;
     public Rigidbody2D rigidBody2D;

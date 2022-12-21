@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
     private void Death()
     {
         //Remember to later get the animation set to the enemy so that we can call on the death animation here.
+        //Make sure all death animations have the same animator names to make sure I don't need to repeat this process for every enemy.
         //Destroy(gameObject);
     }
     IEnumerator DamageWait() //prevent damage from affecting the instance multiple times in one frame (a serious problem with projectile attacks)
