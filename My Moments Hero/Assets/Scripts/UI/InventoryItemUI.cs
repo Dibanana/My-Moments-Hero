@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
-//using TMPro; (Only necessary if adding quantity text)
+using TMPro; //(Only necessary if adding text)
 
 public class InventoryItemUI : MonoBehaviour
 {
     [SerializeField] private Image ItemImage;
-    //[SerializeField] private TMP_Text quantityTxt; (I don't want quantity, but this would probably be useful another time)
+    [SerializeField] private TMP_Text NameTxt; //(I don't want quantity, but this would use the same field)
     [SerializeField] private Image BorderImage; //use this for selected item
     [SerializeField] private Image DarkenImage; //use this for already equipped item
 
@@ -25,6 +25,7 @@ public class InventoryItemUI : MonoBehaviour
     public void ResetData()
     {
         this.ItemImage.gameObject.SetActive(false);
+        this.NameTxt.gameObject.SetActive(false);
         this.empty = true;
     }
     public void Deselect()
@@ -40,14 +41,12 @@ public class InventoryItemUI : MonoBehaviour
     {
         this.ItemImage.gameObject.SetActive(true);
         this.ItemImage.sprite = sprite;
-        //this.quantityTxt.text = quantity + ""; 
+        //this.NameTxt.text = (Item's Script Name).ItemName; (Once I learn how to add item names, I will do just that.)
         //I don't need to include the "this." on everything, the tutorial person is doing it and I'll follow him.
         this.empty = false;
     }
     public void Select()
     {
-        if (empty)
-            return;
         if (BorderImage.enabled == false)
             {
                 BorderImage.enabled = true;
@@ -75,6 +74,8 @@ public class InventoryItemUI : MonoBehaviour
     }
     public void OnPointerClick(BaseEventData data)
     {
+        if (empty)
+            return;
         PointerEventData pointerData = (PointerEventData)data;
         if (pointerData.button == PointerEventData.InputButton.Right)
         {

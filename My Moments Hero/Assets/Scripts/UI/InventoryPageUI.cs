@@ -17,9 +17,33 @@ public class InventoryPageUI : MonoBehaviour
                 Instantiate(ItemPrefab, Vector3.zero, Quaternion.identity);
             UiItem.transform.SetParent(ContentPanel);
             ListOfUIItems.Add(UiItem);
+            UiItem.OnItemClicked += HandleItemSelection;
+            UiItem.OnItemBeginDrag += HandleBeginDrag;
+            UiItem.OnItemClicked += HandleSwap;
+            UiItem.OnItemClicked += HandleEndDrag;
+            UiItem.OnItemClicked += HandleShowItemActions;
         }
     }
-
+    private void HandleItemSelection(InventoryItemUI obj)
+    {
+        
+    }
+    private void HandleBeginDrag(InventoryItemUI obj)
+    {
+        
+    }
+    private void HandleSwap(InventoryItemUI obj)
+    {
+        
+    }
+    private void HandleEndDrag(InventoryItemUI obj)
+    {
+        
+    }
+    private void HandleShowItemActions(InventoryItemUI obj)
+    {
+        Debug.Log(obj.name);
+    }
     public void Show()
     {
         gameObject.SetActive(true);
