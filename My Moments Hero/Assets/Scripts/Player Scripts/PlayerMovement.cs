@@ -25,16 +25,20 @@ public class PlayerMovement : MonoBehaviour
 
         if(IsGrounded() && !Input.GetButton("Jump"))
         {
-            DoubleJump = false;
+            DoubleJump = true;
         }
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (IsGrounded() || DoubleJump)
+            if (IsGrounded())
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-
-                DoubleJump = !DoubleJump;
+            }else{
+                if(DoubleJump==true)
+                {
+                    DoubleJump = !DoubleJump;
+                    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                }
             }
 
         }
