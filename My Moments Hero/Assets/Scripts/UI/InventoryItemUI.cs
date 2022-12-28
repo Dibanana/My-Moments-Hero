@@ -31,7 +31,7 @@ public class InventoryItemUI : MonoBehaviour
     public void Deselect()
     {
         this.BorderImage.enabled = false;
-        this.DarkenImage.enabled = false;
+        //this.DarkenImage.enabled = false; (Save this function for Unequip())
     }
     public void Unequip()
     {
@@ -39,8 +39,8 @@ public class InventoryItemUI : MonoBehaviour
     }
     public void SetData(Sprite sprite, int quantity)
     {
-        this.ItemImage.gameObject.SetActive(true);
-        this.ItemImage.sprite = sprite;
+        ItemImage.gameObject.SetActive(true);
+        ItemImage.sprite = sprite;
         //this.NameTxt.text = (Item's Script Name).ItemName; (Once I learn how to add item names, I will do just that.)
         //I don't need to include the "this." on everything, the tutorial person is doing it and I'll follow him.
         this.empty = false;
@@ -74,8 +74,8 @@ public class InventoryItemUI : MonoBehaviour
     }
     public void OnPointerClick(BaseEventData data)
     {
-        if (empty)
-            return;
+        //if (empty)
+        //    return;
         PointerEventData pointerData = (PointerEventData)data;
         if (pointerData.button == PointerEventData.InputButton.Right)
         {
