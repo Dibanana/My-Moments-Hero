@@ -517,6 +517,7 @@ MonoBehaviour:
   ItemPrefab: {fileID: 5370547377784531846, guid: 70369cfaf50e8b44a8ae4a5c4a0d5a46, type: 3}
   ContentPanel: {fileID: 4817623738564377021}
   ItemDescription: {fileID: 5461344346029688101}
+  mouseFollower: {fileID: 0}
   Image: {fileID: 0}
   NameTxt: Default text
   Description: Still not sure what's happening
@@ -1160,7 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinHeight: 1
   m_PreferredWidth: -1
   m_PreferredHeight: 1
   m_FlexibleWidth: -1
@@ -1618,9 +1619,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinHeight: 1
   m_PreferredWidth: -1
-  m_PreferredHeight: 0
+  m_PreferredHeight: 1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 10
@@ -1888,7 +1889,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: 10
   m_PreferredWidth: -1
-  m_PreferredHeight: -1
+  m_PreferredHeight: 10
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 4
@@ -2974,7 +2975,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 40, y: 0, z: 40, w: 0}
+  m_margin: {x: 40, y: 20, z: 40, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2994,11 +2995,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinHeight: 300
   m_PreferredWidth: -1
-  m_PreferredHeight: 150
+  m_PreferredHeight: 300
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 10
+  m_FlexibleHeight: -1
   m_LayoutPriority: 2
 --- !u!1 &4817623738550836756
 GameObject:
@@ -3184,10 +3185,10 @@ RectTransform:
   m_Father: {fileID: 4817623737571199223}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 385, y: 0}
+  m_SizeDelta: {x: 770, y: 40}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &4817623738564377020
 MonoBehaviour:

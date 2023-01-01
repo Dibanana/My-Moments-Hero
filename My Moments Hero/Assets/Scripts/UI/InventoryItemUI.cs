@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using System;
 using TMPro; //(Only necessary if adding text)
 
-public class InventoryItemUI : MonoBehaviour
+public class InventoryItemUI : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDropHandler, IDragHandler
 {
     [SerializeField] private Image ItemImage;
     [SerializeField] private TMP_Text NameTxt; //(I don't want quantity, but this would use the same field)
@@ -25,7 +25,7 @@ public class InventoryItemUI : MonoBehaviour
     public void ResetData()
     {
         this.ItemImage.gameObject.SetActive(false);
-        this.NameTxt.gameObject.SetActive(false);
+        this.NameTxt.text = "";
         this.empty = true;
     }
     public void Deselect()
@@ -37,12 +37,14 @@ public class InventoryItemUI : MonoBehaviour
     {
         this.DarkenImage.enabled = false;
     }
-    public void SetData(Sprite sprite, int quantity)
+    
+    //I genuinely don't need the int for quantity and it will be defaulted to 1.
+    //However, I believe that with some creativity, I could make some creative uses to specifying weapon variants with the same or similar process.
+    public void SetData(Sprite sprite, int quantity, string ItemName)
     {
         ItemImage.gameObject.SetActive(true);
         ItemImage.sprite = sprite;
-        //this.NameTxt.text = (Item's Script Name).ItemName; (Once I learn how to add item names, I will do just that.)
-        //I don't need to include the "this." on everything, the tutorial person is doing it and I'll follow him.
+        this.NameTxt.text = ItemName;
         this.empty = false;
     }
     public void Select()
@@ -58,30 +60,34 @@ public class InventoryItemUI : MonoBehaviour
             }
 
     }
-    public void OnBeginDrag()
+    public void OnBeginDrag(PointerEventData eventData)
     {
         if (empty)
             return;
         OnItemBeginDrag?.Invoke(this);        //(All of this is for drag function) Allow it so the player can organize inventory, but only use clicking for equipping items.
     }
-    public void OnDrop()
+    public void OnDrop(PointerEventData eventData)
     {
         OnItemDroppedOn?.Invoke(this);
     }
-    public void OnEndDrag()
+
+    public void OnEndDrag(PointerEventData eventData)
     {
         OnItemEndDrag?.Invoke(this);
     }
-    public void OnPointerClick(BaseEventData data)
+    public void OnPointerClick(PointerEventData pointerData)
     {
-        //if (empty)
-        //    return;
-        PointerEventData pointerData = (PointerEventData)data;
+        if (empty)
+            return;
         if (pointerData.button == PointerEventData.InputButton.Right)
         {
             OnRightMouseBtnClick?.Invoke(this);
         }else{
             OnItemClicked?.Invoke(this);
         }
+    }
+    public void OnDrag(PointerEventData eventData)
+    {
+
     }
 }
