@@ -77,8 +77,6 @@ public class InventoryItemUI : MonoBehaviour, IPointerClickHandler, IBeginDragHa
     }
     public void OnPointerClick(PointerEventData pointerData)
     {
-        if (empty)
-            return;
         if (pointerData.button == PointerEventData.InputButton.Right)
         {
             OnRightMouseBtnClick?.Invoke(this);

@@ -90,13 +90,13 @@ If you need more direction or details on anything, just ask me directly and tell
 - - - NOTE FOR ALL ARTISTS - - -
 
 UI: SIZE & RATIO
-For every weapon/item sprite in inventory, the size ratio will be **1:1** and the pixel count will be ideally **64X64**
+For every weapon/item sprite in inventory, the size ratio will be **1:1**
 
-CHARACTER SIZE: Ratio **1:2** Pixels **256X512** (I'm willing to compromise if it turns out different, but I am keeping the hitbox ratio the same)
+CHARACTER SIZE: Ratio **1:2**
 
 ENEMY SIZE: TBD (Once the enemies are created I can make a list)
 
-TERRAIN TEXTURE: Ratio **Infinity:1** Pixels **InfiniteX256** (I'll be honest, I don't know how texturing works.)
+TERRAIN TEXTURE: Ratio **Infinity:1**
 
 VOID FILL: **Infinite:Infinite** (For art to fill in any unused space that the background won't be using already IE: Below Ground, Beyond walls)
 
