@@ -68,7 +68,7 @@ public class InventoryPageUI : MonoBehaviour
     private void HandleShowItemActions(InventoryItemUI UIInventoryItem) //1 (order) //Occurs when Right Clicked
     {
         //Debug.Log(uiinventoryitem.name);
-        ListOfUIItems[0].Deselect();
+        //ListOfUIItems[0].Deselect();
         ItemDescription.ResetDescription();
     }
     private void HandleEndDrag(InventoryItemUI UIInventoryItem) //2 //Self-explanatory
@@ -103,12 +103,13 @@ public class InventoryPageUI : MonoBehaviour
         mouseFollower.Toggle(true);
         mouseFollower.SetData(sprite, 1, NameTxt);
     }
-    private void HandleItemSelection(InventoryItemUI UIInventoryItem)  //5
+    private void HandleItemSelection(InventoryItemUI UIInventoryItem)  //5 When Item is left Clicked
     {
         int Index = ListOfUIItems.IndexOf(UIInventoryItem);
         if (Index == -1)
             return;
         OnDescriptionRequested?.Invoke(Index);
+        UIInventoryItem.Select();
     }
     public void Show()
     {

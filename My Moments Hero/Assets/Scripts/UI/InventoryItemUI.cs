@@ -49,6 +49,11 @@ public class InventoryItemUI : MonoBehaviour, IPointerClickHandler, IBeginDragHa
     }
     public void Select()
     {
+        if (DarkenImage.enabled == true)
+        {
+            DarkenImage.enabled = false;
+            return;
+        }
         if (BorderImage.enabled == false)
             {
                 BorderImage.enabled = true;
@@ -58,7 +63,6 @@ public class InventoryItemUI : MonoBehaviour, IPointerClickHandler, IBeginDragHa
                 //Choose which slot to equip this into and use this old slot for the replaced weapon (if it's not empty).
                 DarkenImage.enabled = true;
             }
-
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
