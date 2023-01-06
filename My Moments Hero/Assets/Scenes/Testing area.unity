@@ -3146,6 +3146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 1091755898}
+  inventoryData: {fileID: 11400000, guid: ba4732ed9c2ccc4419995d36add2b76f, type: 2}
   inventorysize: 12
 --- !u!1001 &9034312187124734528
 PrefabInstance:
