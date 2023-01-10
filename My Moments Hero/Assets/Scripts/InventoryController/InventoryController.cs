@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Inventory.UI;
 using Inventory.Model;
+using System;
 
 namespace Inventory
 {
@@ -12,13 +13,35 @@ namespace Inventory
         [SerializeField] private InventorySO inventoryData;
         public int inventorysize = 12;
 
+        public List<InventoryItem> initialItems = new List<InventoryItem>();
         private void Start()
         {
             PrepareUI();
-            inventoryUI.InitializeInventoryUI(inventoryData.Size);
-            //inventoryData.Initialize();
+            //inventoryUI.InitializeInventoryUI(inventoryData.Size);
+            PrepareInventoryData();
             inventoryUI.Hide();
         }
+        private void PrepareInventoryData()
+        {
+            inventoryData.Initialize();
+            inventoryData.OnInventoryUpdated += UpdateInventoryUI;
+            foreach(InventoryItem Item in initialItems)
+            {
+                if (Item.IsEmpty)
+                    continue;
+                inventoryData.AddItem(Item);
+            }
+        }
+
+        private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
+        {
+            inventoryUI.ResetAllItems();
+            foreach (var Item in inventoryState)
+            {
+                inventoryUI.UpdateData(Item.Key, Item.Value.Item.ItemImage, Item.Value.Item.Name);
+            }
+        }
+
         private void PrepareUI()
         {
             inventoryUI.InitializeInventoryUI(inventoryData.Size);
@@ -33,11 +56,14 @@ namespace Inventory
         }
         private void HandleDragging(int ItemIndex)
         {
-
+            InventoryItem inventoryItem = inventoryData.GetItemAt(ItemIndex);
+            if (inventoryItem.IsEmpty)
+                return;
+            inventoryUI.CreateDraggedItem(inventoryItem.Item.ItemImage, inventoryItem.Item.Name);
         }
         private void HandleSwapItems (int ItemIndex1, int ItemIndex2)
         {
-
+            inventoryData.SwapItems(ItemIndex1, ItemIndex2);
         }
         private void HandleDescriptionRequest(int ItemIndex)
         {

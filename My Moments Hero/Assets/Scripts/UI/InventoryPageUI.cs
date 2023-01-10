@@ -27,6 +27,16 @@ namespace Inventory.UI
         [Header ("Weapon Stats")] 
         //Weapon class should have stats, then this will act as the middleman to tell the description what the stats are
         public int Damage;
+
+        internal void ResetAllItems()
+        {
+            foreach(var Item in ListOfUIItems)
+            {
+                Item.ResetData();
+                Item.Deselect();
+            }
+        }
+
         public int Speed;
         public int Knockback;
         //I still need to figure out how to portray premade stats through sliders. I know I can do it, but need to know how.
