@@ -29,6 +29,7 @@ public class InventorySO : ScriptableObject
                     Item = Item,
                     Quantity = Quantity,
                 };
+                return;
             }
         }
     }
@@ -51,11 +52,13 @@ public class InventorySO : ScriptableObject
 
     public InventoryItem GetItemAt(int ItemIndex)
     {
-        return inventoryItems[ItemIndex];    
+        return inventoryItems[ItemIndex];
     }
 
     public void SwapItems(int itemIndex1, int itemIndex2)
     {
+        if (itemIndex1 <= -1)
+            return;
         InventoryItem item1 = inventoryItems[itemIndex1];
         inventoryItems[itemIndex1] = inventoryItems[itemIndex2];
         inventoryItems[itemIndex2] = item1;

@@ -99,6 +99,7 @@ namespace Inventory.UI
                 return;
             }
             OnSwapItems?.Invoke(CurrentlyDraggedItemIndex, Index);
+            HandleItemSelection(UIInventoryItem);
         }
         private void ResetDraggedItem() //When item is dragged and dropped 
         {
