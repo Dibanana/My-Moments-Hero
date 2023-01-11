@@ -9,6 +9,7 @@ public class InventorySO : ScriptableObject
     [SerializeField] private List<InventoryItem> inventoryItems;
     [field: SerializeField] public int Size {get; private set;} = 12;
 
+    public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
     public void Initialize()
     {
         inventoryItems = new List<InventoryItem>();
@@ -28,8 +29,13 @@ public class InventorySO : ScriptableObject
                     Item = Item,
                     Quantity = Quantity,
                 };
+                return;
             }
         }
+    }
+    public void AddItem(InventoryItem Item)
+    {
+        AddItem(Item.Item, 1); //Item.Quantity instead of 1 if it doesn't work
     }
     public Dictionary<int, InventoryItem> GetCurrentInventoryState()
     {
@@ -46,9 +52,23 @@ public class InventorySO : ScriptableObject
 
     public InventoryItem GetItemAt(int ItemIndex)
     {
-        return inventoryItems[ItemIndex];    
+        return inventoryItems[ItemIndex];
     }
 
+    public void SwapItems(int itemIndex1, int itemIndex2)
+    {
+        if (itemIndex1 <= -1)
+            return;
+        InventoryItem item1 = inventoryItems[itemIndex1];
+        inventoryItems[itemIndex1] = inventoryItems[itemIndex2];
+        inventoryItems[itemIndex2] = item1;
+        InformAboutChange();
+    }
+
+    private void InformAboutChange()
+    {
+        OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
+    }
 }
 [Serializable]
 
