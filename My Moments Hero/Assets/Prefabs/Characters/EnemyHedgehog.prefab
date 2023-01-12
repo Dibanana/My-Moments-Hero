@@ -142,6 +142,7 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.43359375}
       - {x: 0.5, y: 0}
       - {x: 0.25, y: 0.43359375}
+  m_UseDelaunayMesh: 0
 --- !u!114 &9218791547251240857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  MaxHealth: 20
   HealthInfinite: 0
+  DamageIsTaken: 0
 --- !u!114 &9218791547251240870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
+  Damage: 0
   Xrange: 5
   Yrange: 5
   colliderDistance: 0
@@ -210,10 +214,11 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 8
-  speed: 3
-  stoppingDistance: 0
+  IsRanged: 0
+  firePoint: {fileID: 9218791547251240861}
   projectilePrefab: {fileID: 6137451994672591631, guid: 2859446838c6a2f4796ebd3bee7255c4, type: 3}
   projectilePrefabScale: {fileID: 6137451994672591616, guid: 2859446838c6a2f4796ebd3bee7255c4, type: 3}
-  IsRanged: 0
+  DoDamage: {fileID: 0}
+  speed: 3
+  stoppingDistance: 0
   rigidBody2D: {fileID: 9218791547251240859}
-  firePoint: {fileID: 9218791547251240861}

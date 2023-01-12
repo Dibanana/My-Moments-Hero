@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  MaxHealth: 30
   HealthInfinite: 0
   DamageIsTaken: 0
 --- !u!114 &-1662667279900955766

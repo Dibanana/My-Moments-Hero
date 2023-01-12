@@ -10,18 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d1d0f5303da49140bc8e33ec1ce8244, type: 3}
-  m_Name: Shield
+  m_Name: Daggers
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Quantity>k__BackingField: 1
-  <Name>k__BackingField: Shield
-  <Description>k__BackingField: 'Attack cause knockback
+  <Name>k__BackingField: Daggers
+  <Description>k__BackingField: 'Attacks cause bleed
 
-    Block attacks
 
-    Throw/Retrieve '
-  <ItemImage>k__BackingField: {fileID: 21300000, guid: 464f384193ff46b4d89365cc78520a91, type: 3}
-  <Damage>k__BackingField: 4
-  <Speed>k__BackingField: 4
-  <Knockback>k__BackingField: 8
+    Shoot a dagger forward
+    and pull in any enemies it hits.
+
+
+    Can throw one dagger a set distance to
+    use as hook then retrieve it'
+  <ItemImage>k__BackingField: {fileID: 21300000, guid: 887b1961be229c248b9c130a0631f3ef, type: 3}
+  <Damage>k__BackingField: 7
+  <Speed>k__BackingField: 10
+  <Knockback>k__BackingField: 2

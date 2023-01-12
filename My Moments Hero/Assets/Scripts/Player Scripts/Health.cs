@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-
-    public float health;
+    [SerializeField] private HealthUIScript HealthUI;
+    public int health;
+    public int MaxHealth;
     public bool HealthInfinite;
     public bool DamageIsTaken;
+    [SerializeField] private bool IsPlayer = false;
     //public bool IsDead = false;
     // Update is called once per frame
+    void Start()
+    {
+        health = MaxHealth;
+    }
     void Update()
     {
         if (HealthInfinite == true)
@@ -22,6 +28,8 @@ public class Health : MonoBehaviour
             }
         }
         if (DamageIsTaken == true){
+            if(IsPlayer == true)
+                HealthUI.UpdateHealth();
             StartCoroutine(DamageWait());
         }
     }

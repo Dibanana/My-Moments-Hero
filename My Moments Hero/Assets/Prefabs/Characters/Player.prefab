@@ -207,6 +207,7 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+  m_UseDelaunayMesh: 0
 --- !u!114 &5046887573390808115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,9 +243,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7e8d6aff2806546b65d63d35e5d5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthUI: {fileID: 0}
   health: 42
+  MaxHealth: 100
   HealthInfinite: 0
   DamageIsTaken: 0
+  IsPlayer: 1
 --- !u!1 &2437153128496062899
 GameObject:
   m_ObjectHideFlags: 0
