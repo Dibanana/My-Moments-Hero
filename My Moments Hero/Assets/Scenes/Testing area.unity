@@ -3154,7 +3154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4817623737068369284, guid: b4acd9d34f1ba884caff7297e40bd246, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4817623737068369284, guid: b4acd9d34f1ba884caff7297e40bd246, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3396,6 +3396,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4817623738346502512, guid: b4acd9d34f1ba884caff7297e40bd246, type: 3}
+      propertyPath: m_Name
+      value: Slider (KBK)
+      objectReference: {fileID: 0}
     - target: {fileID: 4817623738346502515, guid: b4acd9d34f1ba884caff7297e40bd246, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3445,8 +3449,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4817623738370364547, guid: b4acd9d34f1ba884caff7297e40bd246, type: 3}
-      propertyPath: m_Value
-      value: 4
+      propertyPath: m_HandleRect
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4817623738396510606, guid: b4acd9d34f1ba884caff7297e40bd246, type: 3}
       propertyPath: m_AnchorMax.y
