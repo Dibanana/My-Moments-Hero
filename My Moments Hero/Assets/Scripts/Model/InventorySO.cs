@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [CreateAssetMenu]
 public class InventorySO : ScriptableObject
@@ -18,24 +19,78 @@ public class InventorySO : ScriptableObject
             inventoryItems.Add(InventoryItem.GetEmptyItem());
         }
     }
-    public void AddItem(ItemSO Item, int Quantity)
+    public int AddItem(ItemSO Item, int Quantity)
     {
-        for (int i = 0; i < inventoryItems.Count; i++)
+        if(Item.IsStackable == false)
         {
-            if(inventoryItems[i].IsEmpty)
+            for (int i = 0; i < inventoryItems.Count; i++)
             {
-                inventoryItems[i] = new InventoryItem
+                while (Quantity>0 && IsInventoryFull() == false)
                 {
-                    Item = Item,
-                    Quantity = Quantity,
-                };
-                return;
+                    Quantity -= AddItemToFirstFreeSlot(Item, 1);
+                    
+                }
+                InformAboutChange();
+                return Quantity;
             }
         }
+        Quantity = AddStackableItem(Item, Quantity);
+        InformAboutChange();
+        return Quantity;
+    }
+    private int AddItemToFirstFreeSlot(ItemSO Item, int Quantity)
+    {
+        InventoryItem newItem = new InventoryItem
+        {
+            Item = Item,
+            Quantity = Quantity
+        };
+        for (int i = 0; i < inventoryItems.Count; i++)
+        {
+            if (inventoryItems[i].IsEmpty)
+            {
+                inventoryItems[i] = newItem;
+                return Quantity;
+            }
+        }
+        return 0;
+    }
+    private bool IsInventoryFull()
+        => inventoryItems.Where(Item => Item.IsEmpty).Any() == false;
+    
+    private int AddStackableItem (ItemSO Item, int Quantity)
+    {
+        for (int i = 0; i< inventoryItems.Count; i++)
+        {
+            if (inventoryItems[i].IsEmpty)
+                continue;
+            if(inventoryItems[i].Item.ID == Item.ID)
+            {
+                int AmountPossibleToTake =
+                    inventoryItems[i].Item.MaxStackSize - inventoryItems[i].Quantity;
+                if (Quantity> AmountPossibleToTake)
+                {
+                    inventoryItems[i] = inventoryItems[i].ChangeQuantity(inventoryItems[i].Item.MaxStackSize);
+                    Quantity -= AmountPossibleToTake;
+                } else
+                {
+                    inventoryItems[i] = inventoryItems[i].ChangeQuantity(inventoryItems[i].Quantity+Quantity);
+                    InformAboutChange();
+                    return 0;
+                }
+            }
+        }
+        while(Quantity>0 && IsInventoryFull()==false)
+        {
+            int newQuantity = Mathf.Clamp(Quantity,0,Item.MaxStackSize);
+            Quantity -= newQuantity;
+            AddItemToFirstFreeSlot(Item, newQuantity);
+        }
+        return Quantity;
     }
     public void AddItem(InventoryItem Item)
     {
-        AddItem(Item.Item, 1); //Item.Quantity instead of 1 if it doesn't work
+        AddItem(Item.Item, Item.Quantity); //Manually make sure you ensure that inventory quantity is above 1
     }
     public Dictionary<int, InventoryItem> GetCurrentInventoryState()
     {

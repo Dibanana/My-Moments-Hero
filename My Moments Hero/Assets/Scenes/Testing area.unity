@@ -3870,13 +3870,13 @@ MonoBehaviour:
   inventoryData: {fileID: 11400000, guid: ba4732ed9c2ccc4419995d36add2b76f, type: 2}
   inventorysize: 12
   initialItems:
-  - Quantity: 1
+  - Quantity: 3
     Item: {fileID: 11400000, guid: c6d05b1f7651d6148abdcd4c7dd0adb4, type: 2}
-  - Quantity: 0
+  - Quantity: 1
     Item: {fileID: 11400000, guid: 685d6445310408643a73b612c6e21367, type: 2}
-  - Quantity: 0
+  - Quantity: 1
     Item: {fileID: 11400000, guid: fa8e08e417f45f145961c1a1ebab6e8b, type: 2}
-  - Quantity: 0
+  - Quantity: 1
     Item: {fileID: 11400000, guid: c7a7f05941d317a4fabbbbd0dd7d5f19, type: 2}
 --- !u!1001 &9034312187124734528
 PrefabInstance:

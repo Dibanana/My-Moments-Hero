@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1d0f5303da49140bc8e33ec1ce8244, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  <IsStackable>k__BackingField: 0
-  <MaxStackSize>k__BackingField: 1
+  <IsStackable>k__BackingField: 1
+  <MaxStackSize>k__BackingField: 4
   <Quantity>k__BackingField: 1
   <Name>k__BackingField: Shield
   <Description>k__BackingField: 'Attack cause knockback

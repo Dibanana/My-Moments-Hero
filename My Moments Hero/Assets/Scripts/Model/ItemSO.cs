@@ -10,7 +10,7 @@ public class ItemSO : ScriptableObject
     
     public int ID => GetInstanceID();
 
-    [field: SerializeField] public int MaxStackSize{get; set;} =1;
+    [field: SerializeField] public int MaxStackSize{get; set;} =5;
     [field: SerializeField] public int Quantity{get; set;}
     [field: SerializeField] public string Name{get; set;}
     [field: SerializeField] [field: TextArea] public string Description {get; set;}

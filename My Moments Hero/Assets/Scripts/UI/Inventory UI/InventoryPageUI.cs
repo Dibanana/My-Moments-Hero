@@ -65,17 +65,17 @@ namespace Inventory.UI
                 UiItem.OnRightMouseBtnClick += HandleShowItemActions;
             }
         }
-        public void UpdateDescription(int ItemIndex, Sprite ItemImage, string NameTxt, string Description, int Damage, int Speed, int Knockback)
+        public void UpdateDescription(int ItemIndex, Sprite ItemImage, string NameTxt, string Description, int Damage, int Speed, int Knockback, int Quantity)
         {
-            ItemDescription.SetDescription(ItemImage, NameTxt, Description, Damage, Speed, Knockback);
+            ItemDescription.SetDescription(ItemImage, NameTxt, Description, Damage, Speed, Knockback, Quantity);
             DeselectAllItems();
             ListOfUIItems[ItemIndex].Select();
         }
-        public void UpdateData(int ItemIndex, Sprite ItemImage, string ItemName) //includes int itemquantity, but I dont want quantity
+        public void UpdateData(int ItemIndex, Sprite ItemImage, string ItemName, int Quantity)
         {
             if (ListOfUIItems.Count > ItemIndex)
             {
-                ListOfUIItems[ItemIndex].SetData(ItemImage, 1, ItemName);
+                ListOfUIItems[ItemIndex].SetData(ItemImage, Quantity, ItemName);
             }
         }
         private void HandleShowItemActions(InventoryItemUI UIInventoryItem) //1 (order) //Occurs when Right Clicked
@@ -115,10 +115,10 @@ namespace Inventory.UI
             HandleItemSelection(UIInventoryItem);
             OnStartDragging?.Invoke(Index);
         }
-        public void CreateDraggedItem(Sprite sprite, string NameTxt)
+        public void CreateDraggedItem(Sprite sprite, int Quantity, string NameTxt)
         {
             mouseFollower.Toggle(true);
-            mouseFollower.SetData(sprite, 1, NameTxt);
+            mouseFollower.SetData(sprite, Quantity, NameTxt);
         }
         private void HandleItemSelection(InventoryItemUI UIInventoryItem)  //5 When Item is left Clicked
         {

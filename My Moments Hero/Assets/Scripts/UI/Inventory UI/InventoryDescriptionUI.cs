@@ -12,6 +12,8 @@ public class InventoryDescriptionUI : MonoBehaviour
     [SerializeField] private Image ItemImage;
     [SerializeField] private TMP_Text NameTxt;
     [SerializeField] private TMP_Text Description;
+    [SerializeField] private TMP_Text QuantityTxt;
+    [SerializeField] private int QuanTT;
     public int DMG; //to set the damage slider
     public int SPD; //to set the speed slider
     public int KBK; //to set the knockback slider
@@ -28,20 +30,23 @@ public class InventoryDescriptionUI : MonoBehaviour
         this.DMG = 0;
         this.SPD = 0;
         this.KBK = 0;
+        this.QuantityTxt.text = "Quantity: "+0;
         SliderDMG.ResetData();
         SliderSPD.ResetData();
         SliderKBK.ResetData();
     }
 
-    public void SetDescription(Sprite sprite, string ItemName, string ItemDescription, int Damage, int Speed, int Knockback)
+    public void SetDescription(Sprite sprite, string ItemName, string ItemDescription, int Damage, int Speed, int Knockback, int Quantity)
     {
         this.ItemImage.gameObject.SetActive(true);
         this.ItemImage.sprite = sprite;
         this.NameTxt.text = ItemName;
         this.Description.text = ItemDescription;
+        this.QuantityTxt.text = "Quantity: "+Quantity;
         this.DMG = Damage;
         this.SPD = Speed;
         this.KBK = Knockback;
+        this.QuanTT = Quantity;
         SliderSPD.UpdateData();
         SliderDMG.UpdateData();
         SliderKBK.UpdateData();

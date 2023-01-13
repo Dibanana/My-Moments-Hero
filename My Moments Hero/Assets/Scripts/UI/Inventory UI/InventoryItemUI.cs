@@ -11,10 +11,10 @@ namespace Inventory.UI
     public class InventoryItemUI : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDropHandler, IDragHandler
     {
         [SerializeField] private Image ItemImage;
-        [SerializeField] private TMP_Text NameTxt; //(I don't want quantity, but this would use the same field)
+        [SerializeField] private TMP_Text NameTxt;
         [SerializeField] private Image BorderImage; //use this for selected item
         [SerializeField] private Image DarkenImage; //use this for already equipped item
-
+        [SerializeField] private int Quantity;
         public event Action<InventoryItemUI> OnItemClicked, OnRightMouseBtnClick, OnItemDroppedOn, OnItemBeginDrag, OnItemEndDrag;
 
         private bool empty = true;
@@ -48,6 +48,7 @@ namespace Inventory.UI
             ItemImage.sprite = sprite;
             this.NameTxt.text = ItemName;
             this.empty = false;
+            this.Quantity = quantity;
         }
         public void Select()
         {
