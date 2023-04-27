@@ -65,7 +65,7 @@ namespace Inventory.UI
                 UiItem.OnRightMouseBtnClick += HandleShowItemActions;
             }
         }
-        public void UpdateDescription(int ItemIndex, Sprite ItemImage, string NameTxt, string Description, int Damage, int Speed, int Knockback, int Quantity)
+        public void UpdateDescription(int ItemIndex, Sprite ItemImage, string NameTxt, string Description, int Damage, int Speed, int Knockback, int Quantity=1)
         {
             ItemDescription.SetDescription(ItemImage, NameTxt, Description, Damage, Speed, Knockback, Quantity);
             DeselectAllItems();

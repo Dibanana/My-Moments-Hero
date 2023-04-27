@@ -8,7 +8,7 @@ using System.Linq;
 public class InventorySO : ScriptableObject
 {
     [SerializeField] private List<InventoryItem> inventoryItems;
-    [field: SerializeField] public int Size {get; private set;} = 12;
+    [field: SerializeField] public int Size {get; private set;} = 12; //I have no idea how to serialize or use this field, but this directly influences how many slots are present in the inventory
 
     public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
     public void Initialize()

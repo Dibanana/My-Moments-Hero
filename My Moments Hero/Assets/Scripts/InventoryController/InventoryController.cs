@@ -11,7 +11,8 @@ namespace Inventory
     {
         [SerializeField] private InventoryPageUI inventoryUI;
         [SerializeField] private InventorySO inventoryData;
-        public int inventorysize = 12;
+        //public int inventorysize = 12; (I don't know where this is supposed to come into play. Somewhere in this code manually sets the inventory size
+                                        //without referring to this variable and I don't know  where)
 
         public List<InventoryItem> initialItems = new List<InventoryItem>();
         private void Start()

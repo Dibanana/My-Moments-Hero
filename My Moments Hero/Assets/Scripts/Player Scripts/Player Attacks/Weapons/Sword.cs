@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class Sword : MonoBehaviour
 {
     [SerializeField]private float DuringAttackCooldown; 
     //This will keep track of current progress of cooldown.

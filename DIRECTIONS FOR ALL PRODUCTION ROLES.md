@@ -61,7 +61,7 @@ What I mean to say is that I want to just lightly touch on a few topics without 
 **I just want a simple story that tells the audience we can still look forward to the future.** 
 Just include typical life advice. (Be responsible, be kind, grow from your mistakes, etc.)
 
-Life advice is like veggies, don't let them the babies(Players) know that it has deeper meaning until after it's given.
+Life advice is like hiding veggies in your soup, don't let them the babies(Players) know that it has deeper meaning until after it's given.
 
 (I know I won't use anything here, but seek versatility for where these ideas could be boss fights)
 List of random ideas:
@@ -90,9 +90,9 @@ If you need more direction or details on anything, just ask me directly and tell
 - - - NOTE FOR ALL ARTISTS - - -
 
 UI: SIZE & RATIO
-For every weapon/item sprite in inventory, the size ratio will be **1:1**
+For every weapon/item sprite in inventory, the size ratio will be **1:1** (square)
 
-CHARACTER SIZE: Ratio **1:2**
+CHARACTER SIZE: Ratio **1:2** (1 wide, 2 high)
 
 ENEMY SIZE: TBD (Once the enemies are created I can make a list)
 
@@ -104,9 +104,7 @@ VOID FILL: **Infinite:Infinite** (For art to fill in any unused space that the b
 
 I want something simple and comfortable. Childlike, if possible, with a single article of clothing having vibrant colors to stand out.
 
-At this stage I havent figured out who the main character is. Only a generic outline. I want you to bring the topic up when you're ready.
-
-Boy, Girl, Robot Alien Vending Machine. Flip a coin and move forward.
+The main character is a young girl. I haven't yet decided her attributes but that's the best I got right now.
 Just make sure that the character seems approachable and friendly.
 Best I can provide for a description is just some generic emotional traits that will likely last until production phase.
 **Happy-Go-Lucky|Naive|Bubbly|Energetic|Youthful|Kindhearted**
