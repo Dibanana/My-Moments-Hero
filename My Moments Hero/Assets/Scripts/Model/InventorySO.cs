@@ -8,7 +8,7 @@ using System.Linq;
 public class InventorySO : ScriptableObject
 {
     [SerializeField] private List<InventoryItem> inventoryItems;
-    [field: SerializeField] public int Size {get; private set;} = 12; //I have no idea how to serialize or use this field, but this directly influences how many slots are present in the inventory
+    [field: SerializeField] public int Size {get; private set;} = 12; //This doesnt influence how many slots I have in the inventory. It just resets the inventory to be empty for however many there are slots.
 
     public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
     public void Initialize()
@@ -23,16 +23,16 @@ public class InventorySO : ScriptableObject
     {
         if(Item.IsStackable == false)
         {
-            for (int i = 0; i < inventoryItems.Count; i++)
+            for (int i = 0; i < inventoryItems.Count; i++) //I have no clue why this one has unreachable code... It doesn't break the game so I'll ignore it for now.
             {
                 while (Quantity>0 && IsInventoryFull() == false)
                 {
                     Quantity -= AddItemToFirstFreeSlot(Item, 1);
-                    
                 }
                 InformAboutChange();
-                return Quantity;
+                //return Quantity (I moved the return quantity out of the for loop and it fixed the unreachable code, but I'm not sure if that would have any effects later down the line.)
             }
+            return Quantity;
         }
         Quantity = AddStackableItem(Item, Quantity);
         InformAboutChange();

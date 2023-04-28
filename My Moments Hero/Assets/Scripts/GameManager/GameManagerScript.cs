@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour
     public GameObject player;
     [SerializeField] private bool UsePlatformEffector = false;
     private GameObject[] platforms;
+    public Transform lastCheckPointPos;
     // Start is called before the first frame update
     void Start()
     {
