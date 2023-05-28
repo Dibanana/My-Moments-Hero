@@ -17,8 +17,15 @@ public class LevelLoader : MonoBehaviour
             Debug.Log("Next Scene will be Scene"+ SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
-    public void LoadScene(int Scene)
+    public void LoadScene(int Scene = -1)
     {
-        SceneManager.LoadScene(Scene);
+        if (Scene == -1)
+        {
+            LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(Scene);
+        }
     }
 }

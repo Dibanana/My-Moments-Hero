@@ -1542,8 +1542,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 836194687}
         m_TargetAssemblyTypeName: HealthUIScript, Assembly-CSharp
-        m_MethodName: UpdateHealth
-        m_Mode: 1
+        m_MethodName: OnSliderChanged
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2444,11 +2444,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586066132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7505f377ea5f5464db61c0fbff43d81c, type: 3}
+  m_Script: {fileID: 11500000, guid: 15dc4dcb7c30ec34aa1abc717bf716dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FollowSpeed: 2
-  target: {fileID: 7482911486190816670}
+  target: {fileID: 0}
+  BXYS: 1
 --- !u!1 &1681130080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,17 +3794,9 @@ PrefabInstance:
       value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 5046887573390808112, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
-      propertyPath: health
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5046887573390808112, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
       propertyPath: HealthUI
       value: 
       objectReference: {fileID: 836194687}
-    - target: {fileID: 5046887573390808112, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
-      propertyPath: HealthInfinite
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7250485066961469139, guid: 2ed0fa310d214fb49ad11f6d26d342a6, type: 3}
       propertyPath: m_Enabled
       value: 1
