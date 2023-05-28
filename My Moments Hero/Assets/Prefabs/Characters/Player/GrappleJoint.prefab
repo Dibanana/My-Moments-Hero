@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5636550155185026442}
   - component: {fileID: 5636550155185026443}
   - component: {fileID: 5636550155185026440}
+  - component: {fileID: 6962824269706159642}
   m_Layer: 3
   m_Name: GrappleJoint
   m_TagString: Untagged
@@ -96,7 +97,7 @@ ParentConstraint:
   m_Enabled: 1
   serializedVersion: 2
   m_Weight: 1
-  m_TranslationAtRest: {x: -2.541974, y: -0.019766573, z: 0}
+  m_TranslationAtRest: {x: -3.5566797, y: -12.466403, z: 0.11614472}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffsets:
   - {x: 0, y: 0, z: 0}
@@ -128,3 +129,19 @@ MonoBehaviour:
   grapple: {fileID: 0}
   Damage: 6
   KnockPower: 1
+--- !u!58 &6962824269706159642
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636550155185026454}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.24

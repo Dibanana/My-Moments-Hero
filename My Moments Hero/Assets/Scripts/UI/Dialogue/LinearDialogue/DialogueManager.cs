@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     //HALTING GAMEPLAY
     [SerializeField] protected bool IsGameplay = true;
     private PlayerMovement PlayerMove = null;
-    private PlayerAttack PlayerATK = null;
+    private PassiveInteract PlayerATK = null;
     private PlayerController PlayerCrl = null;
     private bool InConversation = false;
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
         if (IsGameplay == true)
         {
             PlayerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-            PlayerATK = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
+            PlayerATK = GameObject.FindGameObjectWithTag("Player").GetComponent<PassiveInteract>();
             PlayerCrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         }
 
@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         if (Interactions.IsGameplay == true)
         {
             PlayerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-            PlayerATK = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
+            PlayerATK = GameObject.FindGameObjectWithTag("Player").GetComponent<PassiveInteract>();
             PlayerCrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         }
         if(PlayerMove != null)
@@ -152,7 +152,7 @@ public class DialogueManager : MonoBehaviour
             DisplayNextSentence();
             return;
         }
-        if (sentence == "GameplayTrue")
+        if (sentence == "GameplayTrue") //No current use, but should theoretically prevent the player from moving
         {
             IsGameplay = true;
             DisplayNextSentence();
@@ -165,13 +165,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         foreach (string name in DialogueName)
-            //foreach(int emote in CharacterEmotes)
-            //{
-            //    if (sentence == name+emote)
-            //    {
-            //        //Uses SceneManager to change the associated character's expression
-            //    }
-            //}
             if (sentence == name)
             {
                 ChangeDisplayedName(sentence);
@@ -192,6 +185,12 @@ public class DialogueManager : MonoBehaviour
                 return;
                 //When adding, the SceneManager will check if the name exists(Will ignore repeats), will add the name to the array, then instanciate the GameObject with the name's parameters.
             }
+            
+        //Scrapped idea was adding emotes, movements, animations and effects to the characters. Having "face3 + name" or "anim1 + name" or something. The downside is that it adds way more checkwork and exponentially more organizing, so I'm probably gonna revamp this dialogue and scrap most of this work.
+            //(BTW)God I hate this shitty dialogue setup.
+            //I don't know code enough to make amy good method to viably merge variables with interactions so I just brute forced it... If anyone reads this - I'm sorry.
+        
+        
         int z = 0;
         foreach (string environment in EnviromentName)
         {

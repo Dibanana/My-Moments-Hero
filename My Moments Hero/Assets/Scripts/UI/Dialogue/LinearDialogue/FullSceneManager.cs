@@ -39,7 +39,8 @@ public class FullSceneManager : MonoBehaviour
     //Activate Background with associated Sprite
     public void SetBackground(int Spriteground, bool Stay = false)
     {
-        if(Spriteground == 0)
+        //Debug.Log("Setting Background now");
+        if(Spriteground == 0) //Common mistake, always have a "none" background in FullSceneManager and in the cutscenes. Just something empty to fill the spot of spriteground 0.
         {
             if (Stay == false)
                 StartCoroutine(BackFade(true));
@@ -116,12 +117,12 @@ public class FullSceneManager : MonoBehaviour
     }
     public void FadeBack(bool isTrue)//A bounce-between so that I could fade away during other codes
     {
-        Debug.Log("Initiating Fade");
+        //Debug.Log("Initiating Fade");
         StartCoroutine(BackFade(isTrue));
     }
     public IEnumerator BackFade(bool isTrue)
     {
-        Debug.Log("Fade Complete");
+        //Debug.Log("Fade Complete");
         BackgroundFade.SetBool("Fade", isTrue);
         yield return new WaitForEndOfFrame();
     }

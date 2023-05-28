@@ -25,8 +25,8 @@ public class Sword : MonoBehaviour
             {
                 Collider2D[] AreaOfEffect = Physics2D.OverlapBoxAll(AttackPos.position, new Vector2(Xrange,Yrange), 0, WhatIsEnemies);
                 for (int i = 0; i < AreaOfEffect.Length; i++){
-                    AreaOfEffect[i].GetComponent<Health>().TakeDamage(Damage);
-                    AreaOfEffect[i].GetComponent<Knockback>().Knocked(KnockPower);
+                    AreaOfEffect[i].GetComponent<Health>().TakeDamage(Damage); //For Enemies
+                    AreaOfEffect[i].GetComponent<Knockback>().Knocked(KnockPower); //For Enemies
                     DuringAttackCooldown = AttackCooldown;
                 }
             }

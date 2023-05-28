@@ -7,7 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(this);
     }
     void OnTriggerStay2D(Collider2D collision)
     {
