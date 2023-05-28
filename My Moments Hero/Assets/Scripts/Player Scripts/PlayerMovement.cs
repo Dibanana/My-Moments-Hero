@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public bool KnockbackRight;
 
     private bool DoubleJump;
+    public bool CanDoubleJump; //So that the character doesn't start the game with the ability and can gain it later on
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             }else{
-                if(DoubleJump==true)
+                if(DoubleJump==true&&CanDoubleJump == true)
                 {
                     DoubleJump = !DoubleJump;
                     rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
